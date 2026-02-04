@@ -297,7 +297,7 @@ export type ArtifactAgentPacket = {
   contentType: string;
   url: string | URL;
 } & BaseAgentPacketWithIds;
-export type WaggleDanceAgentPacket =
+export type GoalSwarmAgentPacket =
   | ({
       type: "contextAndTools";
     } & BaseAgentPacketWithIds &
@@ -316,7 +316,7 @@ export type WaggleDanceAgentPacket =
 // TODO: group these by origination for different logic, or maybe different typings
 
 export type AgentPacket =
-  | WaggleDanceAgentPacket
+  | GoalSwarmAgentPacket
   | ({
       type: "handleChatModelStart";
       llm: Serialized;

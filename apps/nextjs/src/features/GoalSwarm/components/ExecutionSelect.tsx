@@ -16,7 +16,7 @@ import { rootPlanId } from "@acme/agent";
 import { type ExecutionPlusGraph } from "@acme/db";
 
 import routes from "~/utils/routes";
-import useWaggleDanceMachineStore from "~/stores/waggleDanceStore";
+import useGoalSwarmMachineStore from "~/stores/goalSwarmStore";
 import timeAgo from "../utils/timeAgo";
 
 type ExecutionSelectProps = BoxProps & {
@@ -31,7 +31,7 @@ export const ExecutionSelect = ({
   showDisabled,
   ...props
 }: ExecutionSelectProps) => {
-  const { execution } = useWaggleDanceMachineStore();
+  const { execution } = useGoalSwarmMachineStore();
   const [_isOpen, setIsOpen] = React.useState(false);
   const [_anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const names = useMemo(() => {
@@ -184,7 +184,7 @@ export const ExecutionSelect = ({
                     level="body-xs"
                     className=" items-end text-center"
                   >
-                    Previous Waggles
+                    Previous Swarms
                   </Typography>
                 </FormLabel>
 
@@ -192,7 +192,7 @@ export const ExecutionSelect = ({
                   disabled={(executions?.length ?? 0) === 0}
                   defaultValue={execution?.id}
                   value={execution?.id}
-                  placeholder={<Typography>Select Waggle</Typography>}
+                  placeholder={<Typography>Select Swarm</Typography>}
                   slotProps={{
                     button: {
                       id: "select-execution-button",

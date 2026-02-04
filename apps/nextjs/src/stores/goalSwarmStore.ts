@@ -1,4 +1,4 @@
-// stores/waggleDanceStore.ts
+// stores/goalSwarmStore.ts
 
 import { v4 } from "uuid";
 import { create } from "zustand";
@@ -19,7 +19,7 @@ import {
 
 import { app } from "~/constants";
 
-export interface WaggleDanceMachineStore {
+export interface GoalSwarmMachineStore {
   isRunning: boolean;
   setIsRunning: (newState: boolean) => void;
   isAutoStartEnabled: boolean;
@@ -55,8 +55,8 @@ export function createDraftExecution(selectedGoal: GoalPlusExe) {
   return draftExecution;
 }
 
-const useWaggleDanceMachineStore = create(
-  persist<WaggleDanceMachineStore>(
+const useGoalSwarmMachineStore = create(
+  persist<GoalSwarmMachineStore>(
     (set, _get) => ({
       isRunning: false,
       setIsRunning: (newState) => set({ isRunning: newState }),
@@ -112,14 +112,14 @@ const useWaggleDanceMachineStore = create(
       },
     }),
     {
-      name: app.localStorageKeys.waggleDance,
+      name: app.localStorageKeys.goalSwarm,
       storage: createJSONStorage(() => sessionStorage), // alternatively use: localStorage
-      partialize: (state: WaggleDanceMachineStore) =>
+      partialize: (state: GoalSwarmMachineStore) =>
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !["isRunning"].includes(key)),
-        ) as WaggleDanceMachineStore,
+        ) as GoalSwarmMachineStore,
     },
   ),
 );
 
-export default useWaggleDanceMachineStore;
+export default useGoalSwarmMachineStore;

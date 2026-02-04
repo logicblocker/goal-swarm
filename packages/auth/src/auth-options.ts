@@ -33,7 +33,8 @@ declare module "next-auth" {
 }
 
 function PostmarkEmailProvider(options: EmailUserConfig): EmailConfig {
-  const from = process.env.EMAIL_FROM || "waggledance <noreply@waggledance.ai>";
+  const from =
+    process.env.EMAIL_FROM || "goal-swarm <saint.seiya.0223@gmail.com>";
   const server = "https://api.postmarkapp.com/email";
   const token = process.env.POSTMARK_TOKEN;
   assert(token);

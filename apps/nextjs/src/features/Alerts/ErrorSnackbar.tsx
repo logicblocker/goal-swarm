@@ -60,7 +60,7 @@ const Support = () => {
       <ListItem>
         <ListItemButton color="neutral">
           <Link
-            href="https://github.com/agi-merge/waggle-dance/issues"
+            href="https://github.com/goal-swarm/goal-swarm/issues"
             target="_blank"
             rel="noopener noreferrer"
           >

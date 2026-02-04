@@ -1,4 +1,4 @@
-// features/WaggleDance/hooks/useWaggleDance.ts
+// features/GoalSwarm/hooks/useGoalSwarmAgentExecutor.ts
 
 import {
   useCallback,
@@ -26,9 +26,9 @@ import { type DraftExecutionNode, type ExecutionPlusGraph } from "@acme/db";
 import { api } from "~/utils/api";
 import useApp from "~/stores/appStore";
 import useGoalStore from "~/stores/goalStore";
-import useWaggleDanceMachineStore from "~/stores/waggleDanceStore";
-import { type GraphDataState, type WaggleDanceResult } from "../types/types";
-import WaggleDanceAgentExecutor from "../types/WaggleDanceAgentExecutor";
+import useGoalSwarmMachineStore from "~/stores/goalSwarmStore";
+import { type GraphDataState, type GoalSwarmResult } from "../types/types";
+import GoalSwarmAgentExecutor from "../types/GoalSwarmAgentExecutor";
 import { dagToGraphData } from "../utils/conversions";
 
 export type LogMessage = {
@@ -38,9 +38,9 @@ export type LogMessage = {
   id: string;
 };
 
-const useWaggleDanceAgentExecutor = () => {
+const useGoalSwarmAgentExecutor = () => {
   const { setIsRunning, agentSettings, execution, graph, setGraph } =
-    useWaggleDanceMachineStore();
+    useGoalSwarmMachineStore();
   const { setError } = useApp();
 
   const graphDataStateRef: MutableRefObject<GraphDataState> = useRef([
@@ -230,7 +230,7 @@ const useWaggleDanceAgentExecutor = () => {
   );
 
   const reset = useCallback(() => {
-    console.warn("resetting waggle dance machine");
+    console.warn("resetting goal swarm machine");
     setGraph(
       {
         nodes: [rootPlanNode(goal?.prompt ?? "")],
@@ -281,9 +281,9 @@ const useWaggleDanceAgentExecutor = () => {
         throw new Error("Execution not set");
       }
 
-      let result: WaggleDanceResult | Error;
+      let result: GoalSwarmResult | Error;
       try {
-        const agentExecutor = new WaggleDanceAgentExecutor(
+        const agentExecutor = new GoalSwarmAgentExecutor(
           agentSettings,
           goal.prompt,
           goalId,
@@ -313,7 +313,7 @@ const useWaggleDanceAgentExecutor = () => {
         }
       }
 
-      console.debug("waggleDanceMachine.run result", result);
+      console.debug("goalSwarmMachine.run result", result);
 
       setIsRunning(false);
       if (!ac.signal.aborted) {
@@ -321,11 +321,11 @@ const useWaggleDanceAgentExecutor = () => {
       }
 
       if (isAbortError(result)) {
-        console.error("Error in WaggleDanceMachine's run:", result);
+        console.error("Error in GoalSwarmMachine's run:", result);
         updateExecutionState({ executionId, state: "CANCELLED" });
         return;
       } else if (result instanceof Error) {
-        console.error("Error in WaggleDanceMachine's run:", result);
+        console.error("Error in GoalSwarmMachine's run:", result);
         updateExecutionState({ executionId, state: "ERROR" });
         setError(result);
         return;
@@ -364,4 +364,4 @@ const useWaggleDanceAgentExecutor = () => {
   };
 };
 
-export default useWaggleDanceAgentExecutor;
+export default useGoalSwarmAgentExecutor;

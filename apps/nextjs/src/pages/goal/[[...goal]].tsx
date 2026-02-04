@@ -19,17 +19,17 @@ import { env } from "~/env.mjs";
 import ErrorBoundary from "~/features/error/ErrorBoundary";
 import MainLayout from "~/features/MainLayout";
 import useSkillStore from "~/stores/skillStore";
-import useWaggleDanceMachineStore from "~/stores/waggleDanceStore";
+import useGoalSwarmMachineStore from "~/stores/goalSwarmStore";
 import useGoalStore from "../../stores/goalStore";
 
 const PageTitle = lazy(
   () => import("~/features/MainLayout/components/PageTitle"),
 );
 const GoalPrompt = lazy(() => import("~/features/GoalPrompt/GoalPrompt"));
-const WaggleDanceSettingsAccordion = lazy(
-  () => import("~/features/WaggleDance/components/WaggleDanceDashboard"),
+const GoalSwarmSettingsAccordion = lazy(
+  () => import("~/features/GoalSwarm/components/GoalSwarmDashboard"),
 );
-const WaggleDance = lazy(() => import("~/features/WaggleDance/WaggleDance"));
+const GoalSwarm = lazy(() => import("~/features/GoalSwarm/GoalSwarm"));
 
 type AlertConfig = {
   id: string;
@@ -91,7 +91,7 @@ const GoalPage = ({ alertConfigs }: Props) => {
   const router = useRouter();
   const { goalMap, selectedGoal, upsertGoals, selectGoalId } = useGoalStore();
   const { isRunning, setExecution /*, agentSettings*/ } =
-    useWaggleDanceMachineStore();
+    useGoalSwarmMachineStore();
   const { selectedSkills, selectedSkillsLength } = useSkillStore();
   const skillsLabel = useMemo(() => {
     const label = selectedSkills
@@ -172,12 +172,12 @@ const GoalPage = ({ alertConfigs }: Props) => {
           <GoalPrompt />
         ) : (
           <>
-            <PageTitle title={isRunning ? "💃 Waggling!" : "💃 Waggle"}>
+            <PageTitle title={isRunning ? "🐝 Swarming!" : "🐝 Swarm"}>
               {goal?.prompt && (
                 <Suspense
                   fallback={<Skeleton variant="rectangular" height="6rem" />}
                 >
-                  <WaggleDanceSettingsAccordion
+                  <GoalSwarmSettingsAccordion
                     goal={goal}
                     // latencyLevel={latencyLevel}
                     // rigorLevel={rigorLevel}
@@ -191,7 +191,7 @@ const GoalPage = ({ alertConfigs }: Props) => {
             <Suspense
               fallback={<Skeleton variant="rectangular" height="10rem" />}
             >
-              <WaggleDance />
+              <GoalSwarm />
             </Suspense>
           </>
         )}

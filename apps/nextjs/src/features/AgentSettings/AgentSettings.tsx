@@ -22,11 +22,11 @@ import {
 
 import routes from "~/utils/routes";
 import { env } from "~/env.mjs";
-import useWaggleDanceMachineStore from "~/stores/waggleDanceStore";
+import useGoalSwarmMachineStore from "~/stores/goalSwarmStore";
 
 export function AgentSettings() {
   const { agentSettings, setAgentSettings, isRunning } =
-    useWaggleDanceMachineStore();
+    useGoalSwarmMachineStore();
   const [isShowingAlert, setIsShowingAlert] = React.useState(false);
   const { data: session } = useSession();
 

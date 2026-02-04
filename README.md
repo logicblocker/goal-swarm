@@ -1,14 +1,14 @@
-<h1 align="center">🐝💃 waggledance.ai <img src="https://img.shields.io/badge/preview-%20" /></h1>
+<h1 align="center">🐝 goal-swarm <img src="https://img.shields.io/badge/preview-%20" /></h1>
 
 <div align="center"
 
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-![CI](https://github.com/agi-merge/waggle-dance/actions/workflows/ci.yml/badge.svg?event=push)
-[![CodeQL](https://github.com/agi-merge/waggle-dance/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/agi-merge/waggle-dance/actions/workflows/github-code-scanning/codeql)
+![CI](https://github.com/goal-swarm/goal-swarm/actions/workflows/ci.yml/badge.svg?event=push)
+[![CodeQL](https://github.com/goal-swarm/goal-swarm/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/goal-swarm/goal-swarm/actions/workflows/github-code-scanning/codeql)
 <br/>
 <br/>
 [![Join Discord Server](https://dcbadge.vercel.app/api/server/ttt9YmhQU6?style=flat)](https://discord.gg/ttt9YmhQU6)
-[![GitHub Repo stars](https://img.shields.io/github/stars/agi-merge/waggle-dance?style=social)](https://github.com/agi-merge/waggle-dance)
+[![GitHub Repo stars](https://img.shields.io/github/stars/goal-swarm/goal-swarm?style=social)](https://github.com/goal-swarm/goal-swarm)
 
 </div>
 
@@ -22,19 +22,19 @@
 
 ## Quick Start
 
-- [![Cloud Preview](https://img.shields.io/badge/PREVIEW-waggledance.ai-blue?style=flat&logo=world&logoColor=white)](https://waggledance.ai) Try the cloud preview ↗
+- [![Cloud Preview](https://img.shields.io/badge/PREVIEW-goal-swarm-blue?style=flat&logo=world&logoColor=white)](https://goal-swarm.dev) Try the cloud preview ↗
 - [Join the Discord](https://discord.gg/ttt9YmhQU6)
 - ⭐️ Help with algorithm: star this repo
 
 You can also build and deploy yourself! However, [you must configure your environment](#%EF%B8%8F-configure-your-environment).
 
-- <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fagi-merge%2Fwaggle-dance&env=NEXTAUTH_URL,OPENAI_API_KEY,WEAVIATE_HOST,WEAVIATE_API_KEY,WEAVIATE_SCHEME,LONG_TERM_MEMORY_INDEX_NAME,KV_URL,KV_REST_API_URL,KV_REST_API_TOKEN,KV_REST_API_READ_ONLY_TOKEN,POSTGRES_PRISMA_URL,POSTGRES_URL_NON_POOLING,EDGE_CONFIG,VECTOR_NAMESPACE_SALT,LONG_TERM_MEMORY_INDEX_NAME,EDGE_CONFIG,BLOB_READ_WRITE_TOKEN,ALLOW_API_CLIENTS&project-name=waggle-dance&repository-name=waggle-dance" alt="Deploy with Vercel"><img src="https://vercel.com/button" height="20" /></a> Deploy to Vercel
+- <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fgoal-swarm%2Fgoal-swarm&env=NEXTAUTH_URL,OPENAI_API_KEY,WEAVIATE_HOST,WEAVIATE_API_KEY,WEAVIATE_SCHEME,LONG_TERM_MEMORY_INDEX_NAME,KV_URL,KV_REST_API_URL,KV_REST_API_TOKEN,KV_REST_API_READ_ONLY_TOKEN,POSTGRES_PRISMA_URL,POSTGRES_URL_NON_POOLING,EDGE_CONFIG,VECTOR_NAMESPACE_SALT,LONG_TERM_MEMORY_INDEX_NAME,EDGE_CONFIG,BLOB_READ_WRITE_TOKEN,ALLOW_API_CLIENTS&project-name=goal-swarm&repository-name=goal-swarm" alt="Deploy with Vercel"><img src="https://vercel.com/button" height="20" /></a> Deploy to Vercel
 - [Docker Compose](#-docker)
 - [Build and run from source](#-running-locally-and-development)
 
-**waggledance.ai** is an experimental application focused on achieving user-specified goals. It provides a friendly but opinionated user interface for building agent-based systems. The project focuses on explainability, observability, concurrent generation, and exploration. Currently in pre-alpha, the development philosophy prefers experimentation over stability as goal-solving and Agent systems are rapidly evolving.
+**goal-swarm** is an experimental application focused on achieving user-specified goals. It provides a friendly but opinionated user interface for building agent-based systems. The project focuses on explainability, observability, concurrent generation, and exploration. Currently in pre-alpha, the development philosophy prefers experimentation over stability as goal-solving and Agent systems are rapidly evolving.
 
-waggledance.ai takes a goal and passes it to a **Planner Agent** which streams an execution graph for sub-tasks. Each sub-task is executed as concurrently as possible by **Execution Agents**. To reduce poor results and hallucinations, sub-results are reviewed by **Criticism Agents**. Eventually, the **Human in the loop (you!)** will be able to chat with individual Agents and provide course-corrections if needed.
+goal-swarm takes a goal and passes it to a **Planner Agent** which streams an execution graph for sub-tasks. Each sub-task is executed as concurrently as possible by **Execution Agents**. To reduce poor results and hallucinations, sub-results are reviewed by **Criticism Agents**. Eventually, the **Human in the loop (you!)** will be able to chat with individual Agents and provide course-corrections if needed.
 
 It was originally inspired by [Auto-GPT](https://github.com/Significant-Gravitas/Auto-GPT), and has concurrency features similar to those found in [gpt-researcher](https://github.com/assafelovic/gpt-researcher). Therefore, core tenets of the project include _speed_, _accuracy_, _observability_, and _simplicity_. Additionally, many other agentic systems are written in Python, so this project acts as a small counter-balance, and is accessible to the large number of Javascript developers.
 
@@ -43,8 +43,8 @@ An (unstable) API is also available via [tRPC](packages/api/src/root.ts) as well
 <p align="center">
 
 <picture>
-    <source srcset="https://github.com/agi-merge/waggle-dance/assets/906671/3380a442-05d9-48be-920f-21e9e6d8ce41" type="video/mp4">
-    <source srcset="https://github.com/agi-merge/waggle-dance/assets/906671/62693a32-8a46-4a8e-ab1e-3c178fbe0dcf" type="image/gif">
+    <source srcset="https://github.com/goal-swarm/goal-swarm/assets/906671/3380a442-05d9-48be-920f-21e9e6d8ce41" type="video/mp4">
+    <source srcset="https://github.com/goal-swarm/goal-swarm/assets/906671/62693a32-8a46-4a8e-ab1e-3c178fbe0dcf" type="image/gif">
     <img src="apps/nextjs/public/apple-touch-icon.png" alt="bar">
 </picture>
 
@@ -53,7 +53,7 @@ An (unstable) API is also available via [tRPC](packages/api/src/root.ts) as well
 
 # 🦚 Highlighted Features
 
-- LLMs go brrr… waggledance.ai starts by planning a highly concurrent execution graph. Some sub-task branches are not dependent, and can run concurrently.
+- LLMs go brrr… goal-swarm starts by planning a highly concurrent execution graph. Some sub-task branches are not dependent, and can run concurrently.
 - Adversarial agents that review results.
 - Vector database for long-term memory.
 - Explainable results and responsive UI: Graph visualizer, sub-task (agent) results, agent logs and events.
@@ -70,11 +70,11 @@ Basically, anything and everything goes! Though [multi-agent systems have a long
 
 ## 📈 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=agi-merge/waggle-dance&type=Date)](https://star-history.com/#agi-merge/waggle-dance&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=goal-swarm/goal-swarm&type=Date)](https://star-history.com/#goal-swarm/goal-swarm&Date)
 
 ## 🏃 Running Locally and Development
 
-waggledance.ai can be deployed locally using Docker or manually using Node.js. Configuration of `.env` vars is required.
+goal-swarm can be deployed locally using Docker or manually using Node.js. Configuration of `.env` vars is required.
 
 ### Docker
 
@@ -88,11 +88,11 @@ waggledance.ai can be deployed locally using Docker or manually using Node.js. C
 
 ### ⚙️ Configure Your Environment
 
-- Copy `.env.example` to `.env` and configure the environment variables. For help, please [reach out on Discord](https://discord.gg/ttt9YmhQU6). See [env-schema.mjs](https://github.com/agi-merge/waggle-dance/blob/main/apps/nextjs/src/env-schema.mjs) for explicit requirements.
+- Copy `.env.example` to `.env` and configure the environment variables. For help, please [reach out on Discord](https://discord.gg/ttt9YmhQU6). See [env-schema.mjs](https://github.com/goal-swarm/goal-swarm/blob/main/apps/nextjs/src/env-schema.mjs) for explicit requirements.
 
 ### 🐘 Setting up Postgres
 
-Refer to [.env.example](https://github.com/agi-merge/waggle-dance/tree/main/.env.example) and [env-schema.mjs](https://github.com/agi-merge/waggle-dance/tree/main/apps/nextjs/env-schema.mjs) for the required environment variables.
+Refer to [.env.example](https://github.com/goal-swarm/goal-swarm/tree/main/.env.example) and [env-schema.mjs](https://github.com/goal-swarm/goal-swarm/tree/main/apps/nextjs/env-schema.mjs) for the required environment variables.
 Currently only Postgres via Prisma is supported. You can use a local Postgres instance (it is recommended to use Docker) or a cloud provider such as [Supabase](https://supabase.com).
 
 Once you have set up, secured, and configured your Postgres, run the following commands:
@@ -153,13 +153,13 @@ As a best practice, run `turbo lint` before starting a feature and after finishi
 
 ## Contributors
 
-<a href="https://github.com/agi-merge/waggle-dance/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=agi-merge/waggle-dance&max=100&columns=5" />
+<a href="https://github.com/goal-swarm/goal-swarm/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=goal-swarm/goal-swarm&max=100&columns=5" />
 </a>
 
 ## 📚 Helpful Docs
 
-- [See all markdown included in the project for more specifics!](https://github.com/search?q=repo%3Aagi-merge%2Fwaggle-dance+path%3A*.md&type=code)
+- [See all markdown included in the project for more specifics!](https://github.com/search?q=repo%3Agoal-swarm%2Fgoal-swarm+path%3A*.md&type=code)
 
 ## 🤗 Special Thanks
 

@@ -1,4 +1,4 @@
-// features/WaggleDance/components/GoalTabs.tsx
+// features/GoalSwarm/components/GoalTabs.tsx
 
 import { useCallback, useMemo } from "react";
 import { default as NextLink } from "next/link";
@@ -21,7 +21,7 @@ import routes from "~/utils/routes";
 import useIsAppleDevice from "~/hooks/useIsAppleDevice";
 import useApp from "~/stores/appStore";
 import useGoalStore, { draftGoalPrefix } from "~/stores/goalStore";
-import useWaggleDanceMachineStore from "~/stores/waggleDanceStore";
+import useGoalSwarmMachineStore from "~/stores/goalSwarmStore";
 
 interface GoalTabProps extends BoxProps {
   tab: GoalPlusExe;
@@ -41,7 +41,7 @@ const GoalTab: React.FC<GoalTabProps> = ({
   ...props
 }) => {
   const { setIsPageLoading } = useApp();
-  const { isRunning, setIsRunning } = useWaggleDanceMachineStore();
+  const { isRunning, setIsRunning } = useGoalSwarmMachineStore();
   const {
     getGoalInputValue,
     deleteGoalId: deleteGoal,
@@ -158,7 +158,7 @@ const GoalTabs: React.FC<GoalTabsProps> = ({ children }) => {
     newDraftGoalId: newDraftGoal,
     selectedGoal,
   } = useGoalStore();
-  const { isRunning } = useWaggleDanceMachineStore();
+  const { isRunning } = useGoalSwarmMachineStore();
 
   const goalList = useMemo(() => {
     return goalMap ? Object.values(goalMap) : [];

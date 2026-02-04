@@ -21,7 +21,7 @@ import {
   mapAgentSettingsToCreationProps,
   type ExecuteRequestBody,
   type GraphDataState,
-  type WaggleDanceResult,
+  type GoalSwarmResult,
 } from "./types";
 
 type LogType = (...args: (string | number | object)[]) => void;
@@ -41,7 +41,7 @@ export type RunParams = {
   abortController: AbortController;
 };
 
-class WaggleDanceAgentExecutor {
+class GoalSwarmAgentExecutor {
   private error: Error | null = null;
   private taskResults: Record<string, TaskState> = {};
   private injectAgentPacket: InjectAgentPacketType;
@@ -67,7 +67,7 @@ class WaggleDanceAgentExecutor {
     };
   }
 
-  async run(): Promise<WaggleDanceResult | Error> {
+  async run(): Promise<GoalSwarmResult | Error> {
     this.taskResults = {};
     this.error = null;
     const initialNode = rootPlanNode(this.goalPrompt);
@@ -435,4 +435,4 @@ class WaggleDanceAgentExecutor {
   }
 }
 
-export default WaggleDanceAgentExecutor;
+export default GoalSwarmAgentExecutor;
