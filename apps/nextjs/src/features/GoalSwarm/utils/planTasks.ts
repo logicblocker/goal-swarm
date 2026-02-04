@@ -1,4 +1,4 @@
-// features/WaggleDance/utils/planTasks.ts
+// features/GoalSwarm/utils/planTasks.ts
 
 import { type JsonObject } from "langchain/tools";
 
@@ -11,7 +11,7 @@ import {
   type ModelCreationProps,
 } from "../../../../../../packages/agent";
 import { type GraphDataState } from "../types/types";
-import { type InjectAgentPacketType } from "../types/WaggleDanceAgentExecutor";
+import { type InjectAgentPacketType } from "../types/GoalSwarmAgentExecutor";
 import PlanUpdateIntervalHandler from "./PlanUpdateIntervalHandler";
 import { sleep } from "./sleep";
 

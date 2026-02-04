@@ -19,7 +19,7 @@ import { appRouter } from "@acme/api";
 import { authOptions } from "@acme/auth";
 import { prisma, type DraftExecutionNode } from "@acme/db";
 
-import { type ExecuteRequestBody } from "~/features/WaggleDance/types/types";
+import { type ExecuteRequestBody } from "~/features/GoalSwarm/types/types";
 import { uploadAndSaveResult } from "../artifacts/route";
 
 // POST /ap/v1/agent/tasks/:taskId/steps

@@ -45,7 +45,7 @@ const Header = ({}) => {
           level="title-lg"
           fontWeight={400}
         >
-          🐝💃 waggledance.ai
+          🐝 goal-swarm
           <Typography level="body-xs" className="pl-2">
             {app.version}
           </Typography>

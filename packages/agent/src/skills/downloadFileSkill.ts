@@ -23,7 +23,7 @@ const downloadFileSkill = new DynamicZodSkill({
     const response = await fetch(url, {
       method: "GET",
       headers: {
-        "User-Agent": "waggledance.ai/skill",
+        "User-Agent": "goal-swarm/skill",
       },
     });
     if (response.ok) {

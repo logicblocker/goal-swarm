@@ -122,7 +122,7 @@ export const examplePrompts: ExamplePrompts = {
     {
       title: "Comparison of AI Projects",
       prompt:
-        "Compare and contrast AgentGPT, AutoGPT, BabyAGI, https://www.waggledance.ai, and SuperAGI. Find similar projects or state of the art research papers. Create a .md (GFM) report of the findings.",
+        "Compare and contrast AgentGPT, AutoGPT, BabyAGI, https://github.com/goal-swarm/goal-swarm, and SuperAGI. Find similar projects or state of the art research papers. Create a .md (GFM) report of the findings.",
       tags: ["AI", "Comparison", "Research"],
     },
   ],

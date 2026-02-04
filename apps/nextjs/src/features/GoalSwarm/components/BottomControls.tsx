@@ -107,7 +107,7 @@ const BottomControls: React.FC<BottomControlsProps> = ({
                   <Typography level="body-sm">
                     <Link href={routes.auth} target="_blank" color="primary">
                       {isRunning
-                        ? "Sign in to save your next waggle"
+                        ? "Sign in to save your next swarm"
                         : undefined}
                     </Link>
                   </Typography>

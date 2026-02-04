@@ -102,7 +102,7 @@ const toolsAndContextExamples: ToolsAndContextExample[] = [
     input: {
       task: "Research AgentGPT",
       inServiceOfGoal:
-        "Compare and contrast AgentGPT, AutoGPT, BabyAGI, https://waggledance.ai, and SuperAGI. Find similar projects or state of the art research papers. Create a .md (GFM) report of the findings.",
+        "Compare and contrast AgentGPT, AutoGPT, BabyAGI, https://github.com/goal-swarm/goal-swarm, and SuperAGI. Find similar projects or state of the art research papers. Create a .md (GFM) report of the findings.",
       longTermMemories:
         "Previous research on AI technologies like OpenAI's GPT-3, Google's BERT, and Facebook's BART has revealed a wide range of approaches and methodologies, including transformer architectures, reinforcement learning, and unsupervised learning. Also, there were significant advancements in the field of AI with the introduction of transformer-based models like BERT and GPT-3.",
       availableTools: [
@@ -173,7 +173,7 @@ const toolsAndContextExamples: ToolsAndContextExample[] = [
     input: {
       task: "Research AgentGPT",
       inServiceOfGoal:
-        "Compare and contrast AgentGPT, AutoGPT, BabyAGI, https://waggledance.ai, and SuperAGI. Find similar projects or state of the art research papers. Create a .md (GFM) report of the findings.",
+        "Compare and contrast AgentGPT, AutoGPT, BabyAGI, https://github.com/goal-swarm/goal-swarm, and SuperAGI. Find similar projects or state of the art research papers. Create a .md (GFM) report of the findings.",
       longTermMemories:
         "Research on similar AI technologies like OpenAI's GPT-3, Google's BERT, and Facebook's BART has revealed a wide range of approaches and methodologies, including transformer architectures, reinforcement learning, and unsupervised learning. Notable projects include Google's BERT, which introduced the concept of bidirectional transformers, and OpenAI's GPT-3, which demonstrated the power of large-scale unsupervised learning.",
       availableTools: [

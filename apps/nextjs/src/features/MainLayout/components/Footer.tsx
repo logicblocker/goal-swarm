@@ -55,7 +55,7 @@ const Footer = (
         <ListItem>
           <ListItemButton color="neutral">
             <Link
-              href="https://github.com/agi-merge/waggle-dance"
+              href="https://github.com/logicblocker/goal-swarm"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -67,7 +67,7 @@ const Footer = (
         <ListItem>
           <ListItemButton color="neutral">
             <Link
-              href="https://linkedin.com/in/willisjon"
+              href="https://github.com/logicblocker"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -79,7 +79,7 @@ const Footer = (
         <ListItem>
           <ListItemButton>
             <Link
-              href="https://www.patreon.com/agimerge"
+              href="https://github.com/sponsors/logicblocker"
               target="_blank"
               rel="noopener noreferrer"
               color="neutral"
@@ -95,7 +95,7 @@ const Footer = (
         <ListItem>
           <Stack className="items-center">
             <Typography level="body-xs">
-              © 2023 <Link href="https://agimerge.com">agi-merge</Link>
+              © 2023 <Link href="https://github.com/logicblocker">logicblocker</Link>
             </Typography>
             <Typography level="body-xs">
               <Link href="/privacy" target="_blank">

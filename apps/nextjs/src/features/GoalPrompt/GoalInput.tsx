@@ -28,7 +28,7 @@ import { api } from "~/utils/api";
 import routes from "~/utils/routes";
 import useApp from "~/stores/appStore";
 import useGoalStore from "~/stores/goalStore";
-import useWaggleDanceMachineStore from "~/stores/waggleDanceStore";
+import useGoalSwarmMachineStore from "~/stores/goalSwarmStore";
 import AutoRefineGoalToggle from "../AgentSettings/components/AutoRefineGoalToggle";
 import { TokenChip } from "./components/TokenChip";
 
@@ -48,7 +48,7 @@ type GoalInputProps = CardProps;
 export default function GoalInput({}: GoalInputProps) {
   const { getGoalInputValue, setGoalInputValue, upsertGoal, selectedGoal } =
     useGoalStore();
-  const { setIsAutoStartEnabled } = useWaggleDanceMachineStore();
+  const { setIsAutoStartEnabled } = useGoalSwarmMachineStore();
   const {
     isPageLoading,
     setIsPageLoading,
@@ -88,7 +88,7 @@ export default function GoalInput({}: GoalInputProps) {
                 const data = e.data as HTTPStatusy;
                 // route for anonymous users
                 if (data.httpStatus === 401 && selectedGoal) {
-                  // this is a bit of terrible code that makes the state update to be able to waggle
+                  // this is a bit of terrible code that makes the state update to be able to swarm
                   selectedGoal.userId = "guest";
                   upsertGoal(selectedGoal);
                   void router.replace(

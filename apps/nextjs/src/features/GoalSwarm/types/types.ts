@@ -1,4 +1,4 @@
-// WaggleDance/types.ts
+// GoalSwarm/types.ts
 import { type Dispatch, type SetStateAction } from "react";
 import { type JsonObject } from "langchain/tools";
 
@@ -17,7 +17,7 @@ import { env } from "~/env.mjs";
 
 export type PlanResult = DraftExecutionGraph;
 
-export type WaggleDanceContextType = {
+export type GoalSwarmContextType = {
   dag: DraftExecutionGraph;
   updateDAG: (dag: DraftExecutionGraph) => void;
 };
@@ -37,7 +37,7 @@ export type ReviewResult = {
 };
 
 export type BaseResultType = JsonValue | void;
-export type WaggleDanceResult = Record<string, TaskState>;
+export type GoalSwarmResult = Record<string, TaskState>;
 
 export type GraphDataState = [
   DraftExecutionGraph,

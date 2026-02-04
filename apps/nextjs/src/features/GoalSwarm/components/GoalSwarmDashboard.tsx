@@ -1,4 +1,4 @@
-// WaggleDanceDashboard.tsx
+// GoalSwarmDashboard.tsx
 import { useState } from "react";
 import {
   Accordion,
@@ -16,17 +16,17 @@ import { type GoalPlusExe } from "@acme/db";
 import AddDocuments from "~/features/AddDocuments/AddDocuments";
 import SkillSelect from "~/features/Skills/SkillSelect";
 
-type WaggleDanceDashboardProps = {
+type GoalSwarmDashboardProps = {
   goal: GoalPlusExe; // replace with the proper type
   skillsLabel: string;
   selectedSkillsLength: number;
 };
 
-const WaggleDanceDashboard = ({
+const GoalSwarmDashboard = ({
   goal,
   skillsLabel,
   selectedSkillsLength,
-}: WaggleDanceDashboardProps) => {
+}: GoalSwarmDashboardProps) => {
   const [selectedIndex, setSelectedIndex] = useState<Record<number, boolean>>({
     0: false,
     1: false,
@@ -180,4 +180,4 @@ const WaggleDanceDashboard = ({
   );
 };
 
-export default WaggleDanceDashboard;
+export default GoalSwarmDashboard;

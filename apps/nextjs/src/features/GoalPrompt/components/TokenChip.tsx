@@ -5,7 +5,7 @@ import { type TiktokenModel } from "langchain/dist/types/openai-types"
 import { useMemo } from "react"
 import { useDebounce } from "use-debounce"
 
-import useWaggleDanceMachineStore from "~/stores/waggleDanceStore"
+import useGoalSwarmMachineStore from "~/stores/goalSwarmStore"
 
 const defaultMaxTokens = 200;
 
@@ -24,7 +24,7 @@ type TokenChipProps = {
 } & ChipProps;
 
 export const TokenChip = ({ prompt, maxTokens, ...props }: TokenChipProps) => {
-  const { agentSettings } = useWaggleDanceMachineStore();
+  const { agentSettings } = useGoalSwarmMachineStore();
   const encoder = useMemo(() => {
     try {
       return encodingForModel(agentSettings.plan.modelName as TiktokenModel);

@@ -34,10 +34,10 @@ import { api } from "~/utils/api";
 import routes from "~/utils/routes";
 import useApp from "~/stores/appStore";
 import useGoalStore from "~/stores/goalStore";
-import useWaggleDanceMachineStore, {
+import useGoalSwarmMachineStore, {
   createDraftExecution,
-} from "~/stores/waggleDanceStore";
-import useWaggleDanceAgentExecutor from "./hooks/useWaggleDanceAgentExecutor";
+} from "~/stores/goalSwarmStore";
+import useGoalSwarmAgentExecutor from "./hooks/useGoalSwarmAgentExecutor";
 
 const BottomControls = lazy(() => import("./components/BottomControls"));
 
@@ -46,7 +46,7 @@ const GraphTabPanel = lazy(() => import("./components/GraphTabPanel"));
 
 type Props = StackProps;
 // shows the graph, agents, results, general messages and chat input
-const WaggleDance = ({}: Props) => {
+const GoalSwarm = ({}: Props) => {
   const { selectedGoal } = useGoalStore();
   const {
     isRunning,
@@ -54,17 +54,17 @@ const WaggleDance = ({}: Props) => {
     isAutoStartEnabled,
     setIsAutoStartEnabled,
     execution,
-  } = useWaggleDanceMachineStore();
+  } = useGoalSwarmMachineStore();
   const {
     graphData,
     graph,
     stop,
-    run: startWaggleDance,
+    run: startGoalSwarm,
     reset,
     results,
     agentPacketsMap,
     sortedTaskStates,
-  } = useWaggleDanceAgentExecutor();
+  } = useGoalSwarmAgentExecutor();
   const listItemsRef = useRef<HTMLLIElement[]>([]);
   const taskListRef = useRef<HTMLUListElement>(null);
   const [recentTaskId, setRecentTaskId] = useState<string | null>(null);
@@ -113,7 +113,7 @@ const WaggleDance = ({}: Props) => {
           undefined,
           { shallow: true },
         );
-        await startWaggleDance(createdExecution); // idk, execution not set was happening if we relied on useCallback hook
+        await startGoalSwarm(createdExecution); // idk, execution not set was happening if we relied on useCallback hook
         setIsPageLoading(false);
       })();
     },
@@ -266,7 +266,7 @@ const WaggleDance = ({}: Props) => {
         <Tabs
           size="sm"
           key={execution?.id}
-          aria-label="Waggle Dance Status and Results"
+          aria-label="Goal Swarm Status and Results"
           defaultValue={0}
           variant="soft"
           color="neutral"
@@ -381,4 +381,4 @@ const WaggleDance = ({}: Props) => {
   );
 };
 
-export default WaggleDance;
+export default GoalSwarm;

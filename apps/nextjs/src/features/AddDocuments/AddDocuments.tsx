@@ -232,7 +232,7 @@ const AddDocuments = ({ onClose: _onClose, ...props }: Props) => {
             onChange={(e) => setUrlInput(e.target.value)}
             onKeyPress={handleKeyPress}
             variant="outlined"
-            placeholder="e.g. https://github.com/agi-merge/waggle-dance"
+            placeholder="e.g. https://github.com/goal-swarm/goal-swarm"
           />
           <IconButton
             disabled={!isValidUrl(urlInput)}

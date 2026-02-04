@@ -189,7 +189,7 @@ const highQualityExamples = [
         "Google Scholar",
         "Google Translate",
       ],
-      goal: "Compare and contrast AgentGPT, AutoGPT, BabyAGI, https://waggledance.ai, and SuperAGI. Find similar projects or state of the art research papers. Create a .md (GFM) report of the findings.",
+      goal: "Compare and contrast AgentGPT, AutoGPT, BabyAGI, https://github.com/goal-swarm/goal-swarm, and SuperAGI. Find similar projects or state of the art research papers. Create a .md (GFM) report of the findings.",
     },
     output: {
       1: [
@@ -211,7 +211,7 @@ const highQualityExamples = [
         },
         {
           id: "4",
-          name: "Visit https://waggledance.ai",
+          name: "Visit https://github.com/goal-swarm/goal-swarm",
         },
         {
           id: "c",

@@ -19,7 +19,7 @@ import {
   type ExecutionState,
 } from "@acme/db";
 
-import { type ExecuteRequestBody } from "~/features/WaggleDance/types/types";
+import { type ExecuteRequestBody } from "~/features/GoalSwarm/types/types";
 import {
   callExecutionAgent,
   createEmbeddings,

@@ -124,7 +124,7 @@ export const resultRouter = createTRPCRouter({
 
         // Append the new URL to the existing array
 
-        // TODO: allow additional_input to better maintain waggledance features and bypass the extra queries (goal, node)
+        // TODO: allow additional_input to better maintain goal-swarm features and bypass the extra queries (goal, node)
         // Update the result with the new array
         if (result) {
           const updatedArtifactUrls = [...result.artifactUrls, artifactUrl];

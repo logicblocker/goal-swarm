@@ -11,7 +11,7 @@ const routes = {
     return path;
   },
   auth: "/api/auth/signin",
-  donate: "https://www.patreon.com/agimerge",
+  donate: "https://github.com/sponsors/logicblocker",
 };
 
 export default routes;

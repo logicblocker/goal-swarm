@@ -1,4 +1,4 @@
-// features/WaggleDance/utils/executeTask.ts
+// features/GoalSwarm/utils/executeTask.ts
 import { parse } from "yaml";
 
 import {
@@ -6,7 +6,7 @@ import {
   type AgentPacket,
 } from "../../../../../../packages/agent";
 import { type ExecuteRequestBody } from "../types/types";
-import { type InjectAgentPacketType } from "../types/WaggleDanceAgentExecutor";
+import { type InjectAgentPacketType } from "../types/GoalSwarmAgentExecutor";
 
 async function fetchTaskData(
   request: ExecuteRequestBody,

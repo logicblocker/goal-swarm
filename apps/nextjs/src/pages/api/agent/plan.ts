@@ -4,7 +4,7 @@ import { type NextRequest } from "next/server";
 import { v4 } from "uuid";
 import { parse, stringify } from "yaml";
 
-import { type PlanRequestBody } from "~/features/WaggleDance/types/types";
+import { type PlanRequestBody } from "~/features/GoalSwarm/types/types";
 import {
   callPlanningAgent,
   removeEnclosingMarkdown,

@@ -17,7 +17,7 @@ import useApp from "~/stores/appStore";
 
 const Alerts = lazy(() => import("../Alerts/Alerts"));
 const ErrorSnackbar = lazy(() => import("../Alerts/ErrorSnackbar"));
-const GoalTabs = lazy(() => import("../WaggleDance/components/GoalTabs"));
+const GoalTabs = lazy(() => import("../GoalSwarm/components/GoalTabs"));
 const Footer = lazy(() => import("./components/Footer"));
 const Header = lazy(() => import("./components/Header"));
 
